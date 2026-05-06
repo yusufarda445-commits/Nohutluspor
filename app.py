@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 oyuncular= [
-    "Murat Akçakoç",
+    "Murat Akçakoç ©️",
     "Enes Altundaş",
     "Servet Karabat",
     "Servet Tekdemir",
