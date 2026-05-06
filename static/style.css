@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f2f2f2;
+}
+ /* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: gray;
+}
+
+/* HERO */
+.hero {
+    height: 350px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* SECTİONS */
+.section{
+    background: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid black;
+}
+
+/* Container */
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+.card{
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+}
+
+/* MAÇ KARTI */
+.match-card {
+    background: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.match-card:hover {
+    transform: scale(1.02);
+}
+
+.win {
+    border-left: 6px solid green;
+    background: #eaffea;
+}
+
+.loss {
+    border-left: 6px solid red;
+    background: #ffeaea;
+}
+
+.draw {
+    border-left: 6px solid gray;
+    background: #f2f2f2;
+}

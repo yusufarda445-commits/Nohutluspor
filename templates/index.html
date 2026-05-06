@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOHUTLUSPOR</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
+            NOHUTLUSPOR
+        </div>
+        <div class="menu">
+        <a href="/">Ana Sayfa</a>
+        <a href="/oyuncular">Oyuncular</a>
+        <a href="/maclar">Maçlar</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>Hoş Geldiniz</h1>
+        <p>Pütürgenin Kralı Her Zaman Biziz!</p>
+    </div>
+
+    <div class="section">
+        <h2>Son Maç</h2>
+        <p>Nohutluspor 1 - 0 Arhalan</p>
+    </div>
+
+    <div class="section">
+        <h2>Gelecek Maç</h2>
+        <p>Nohutluspor - Ulutaş Sorguçlu</p>
+    </div>
+</body>
+</html>

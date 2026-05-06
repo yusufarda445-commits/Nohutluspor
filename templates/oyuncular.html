@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oyuncular</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
+            NOHUTLUSPOR
+        </div>
+        <div class="menu">
+        <a href="/">Ana Sayfa</a>
+        <a href="/oyuncular">Oyuncular</a>
+        <a href="/maclar">Maçlar</a>
+        </div>
+    </div>
+<h1>Takım Kadrosu ⚽</h1>
+
+<div class="container">
+
+    {% for oyuncu in oyuncular %}
+        <div class="card">
+            {{ oyuncu }}
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
