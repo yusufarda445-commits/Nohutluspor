@@ -22,14 +22,10 @@
 <div class="container">
 
     {% for oyuncu in oyuncular %}
-    <div>
-        {{ oyuncu }}
-
-        {% if oyuncu == kaptan %}
-            ©️ Kaptan
-        {% endif %}
-    </div>
-{% endfor %}
+        <div class="card">
+            {{ oyuncu }}
+        </div>
+    {% endfor %}
 
 </div>
 
