@@ -43,7 +43,6 @@ def oyuncular_sayfa():
 @app.route("/maclar")
 def maclar_sayfa():
     return render_template("maclar.html", maclar=maclar)
-app.run(debug=True)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
