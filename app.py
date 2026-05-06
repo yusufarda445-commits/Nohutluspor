@@ -1,7 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 oyuncular= [
-    "Murat Akçakoç ©️ ",
+    "Murat Akçakoç",
     "Enes Altundaş",
     "Servet Karabat",
     "Servet Tekdemir",
@@ -24,7 +24,8 @@ oyuncular= [
     "Miraç Akçakoç",
     "Erol Tekdemir"
 ]
-
+kaptan = "Murat Akçakoç"
+oyuncu_numara = {}
 maclar = [
     "Nohutluspor 1 - 0 Arhalan",
     "Nohutluspor - Ulutaş Sorguçlu",
@@ -43,6 +44,14 @@ def oyuncular_sayfa():
 @app.route("/maclar")
 def maclar_sayfa():
     return render_template("maclar.html", maclar=maclar)
+@app.route("/admin", methods=["GET", "POST"])
+def admin():
+    if request.method == "POST":
+        isim = request.form["isim"]
+        numara = request.form["numara"]
 
+        oyuncu_numara[isim] = numara
+
+    return render_template("admin.html", oyuncular=oyuncular, numaralar=oyuncu_numara)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
