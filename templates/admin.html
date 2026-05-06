@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #111;
+            color: white;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: white;
+            color:black
+        }
+
+        .player {
+            background: #2a2a2a;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        .numara {
+            color: gray;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>⚽ Admin Panel</h1>
+
+    <form method="POST">
+        <input name="isim" placeholder="Oyuncu İsmi">
+        <input name="numara" placeholder="Numara">
+        <button type="submit">Ekle</button>
+    </form>
+
+    <hr>
+
+    <h3>Oyuncular</h3>
+
+    {% for o in oyuncular %}
+        <div class="player">
+            {{ o }} -
+            <span class="numara">
+                {{ numaralar[o] if o in numaralar else "?" }}
+            </span>
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
